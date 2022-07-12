@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+        <link rel="icon" href="/IMG/logo.png">
+        <title>Cardapio</title>
+    </head>
+    <body>
+      <section>
+      <nav>
+        <div class="navbar">
+          <div class="container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+
+              </div>  
+            <div class="menu-items">
+              <li><a href="/Index.html">Bebidas</a></li>
+              <li><a href="/pratos.html">Pratos</a></li>
+              <li><a href="/porcoes.html">Porções</a></li>
+              <li><a href="/drinks.html">Drinks</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="app">
+              <section id="specialssection" class="specials-container" v-if="menuItems_L" :style="menuStyle">
+                  <div id="special_component" :style="menuStyle">
+                      <h1>Bebidas</h1>
+
+                      <div class="specials-table-container">
+                          <table>
+                              <tbody v-for="item in menuItems_L" :key="`specialmenu-${item.name}`">
+                                  <tr class="nameandprice">
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">Coca cola lata</span>
+                                      </td>
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">R$05,00</span>
+                                      </td>
+                                  </tr>
+                                  <tr class="description">
+                                      <td colspan="2">250ml</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <table>
+                              <tbody v-for="item in menuItems_R" :key="`specialmenu-${item.name}`">
+                                  <tr class="nameandprice">
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">Suco natural</span>
+                                      </td>
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">R$06,00</span>
+                                      </td>
+                                  </tr>
+                                  <tr class="description">
+                                      <td colspan="2">500ml</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+
+                      <div class="specials-table-container">
+                          <table>
+                              <tbody v-for="item in menuItems_L" :key="`specialmenu-${item.name}`">
+                                  <tr class="nameandprice">
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">Energetico</span>
+                                      </td>
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">R$07,00</span>
+                                      </td>
+                                  </tr>
+                                  <tr class="description">
+                                      <td colspan="2">500ml</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <table>
+                              <tbody v-for="item in menuItems_R" :key="`specialmenu-${item.name}`">
+                                  <tr class="nameandprice">
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">Cerveja</span>
+                                      </td>
+                                      <td :style="dotStyle">
+                                          <span :style="menuStyle">r$06,00</span>
+                                      </td>
+                                  </tr>
+                                  <tr class="description">
+                                      <td colspan="2">350ML</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div> 
+
+                      <div class="specials-table-container">
+                        <table>
+                            <tbody v-for="item in menuItems_L" :key="`specialmenu-${item.name}`">
+                                <tr class="nameandprice">
+                                    <td :style="dotStyle">
+                                        <span :style="menuStyle">Agua sem gas</span>
+                                    </td>
+                                    <td :style="dotStyle">
+                                        <span :style="menuStyle">R$02,00</span>
+                                    </td>
+                                </tr>
+                                <tr class="description">
+                                    <td colspan="2">500ml</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody v-for="item in menuItems_R" :key="`specialmenu-${item.name}`">
+                                <tr class="nameandprice">
+                                    <td :style="dotStyle">
+                                        <span :style="menuStyle">Agua com gas</span>
+                                    </td>
+                                    <td :style="dotStyle">
+                                        <span :style="menuStyle">r$02,50</span>
+                                    </td>
+                                </tr>
+                                <tr class="description">
+                                    <td colspan="2">500ML</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+
+                  </div>
+              </section>
+        </div>
+      </section>
+    </body>
+    <script src="script.js" defer></script>
+</html>
